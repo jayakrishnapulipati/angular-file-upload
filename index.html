@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body  ng-controller="fileController">
+
+    <form >
+        <input type='file' ng-model='myFile' ng-change="changeFile()" base-sixty-four-input>
+
+
+        <button type="button" ng-click="save()">FILE UPLOAD</button>
+    </form>
+
+
+
+    <script src="angular.js"></script>
+    <script src="angular-base64-upload.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
