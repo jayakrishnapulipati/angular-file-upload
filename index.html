@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .cropArea {
+            background: #E4E4E4;
+            overflow: hidden;
+            width:500px;
+            height:350px;
+        }
+    </style>
+    <link rel="stylesheet" href="app.css "/>
 </head>
 <body  ng-controller="fileController">
 
-    <form >
+    <!--<form >
         <input type='file' ng-model='myFile' ng-change="changeFile()" base-sixty-four-input>
 
 
         <button type="button" ng-click="save()">FILE UPLOAD</button>
-    </form>
+    </form>-->
+
+    <hr/>
+    <input type="file" id="fileInput" />
+    <div class="cropArea">
+        <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+    </div>
+    <div>Cropped Image:</div>
+    <div><img ng-src="{{myCroppedImage}}" /></div>
 
 
 
     <script src="angular.js"></script>
     <script src="angular-base64-upload.js"></script>
+    <script src="imageupload.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
