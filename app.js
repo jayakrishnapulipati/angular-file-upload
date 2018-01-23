@@ -86,8 +86,9 @@ app.controller('fileController', function ($scope, $http, $window, $timeout) {
         handleFile(event.currentTarget.files[0]);
     }
     $scope.import = function () {
-        angular.element(document.querySelector('#fileInput1')).on('change', test);
+        
     };
+    angular.element(document.querySelector('#fileInput1')).on('change', test);
 
     function handleFile(file) {
 
