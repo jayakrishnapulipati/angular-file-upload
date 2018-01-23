@@ -110,7 +110,7 @@ app.controller('fileController', function ($scope, $http, $window, $timeout) {
                 if (dataObjects.length > 0) {
 
 
-                    $scope.save(dataObjects);
+                    console.log(dataObjects);
 
 
                 } else {
