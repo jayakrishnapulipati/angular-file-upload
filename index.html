@@ -31,10 +31,56 @@
     <div><img ng-src="{{myCroppedImage}}" /></div>
 
 
+    <br><hr/>
+    <hr/>
 
+    <h1>Export to Excel</h1>
+    <button class="btn btn-link" ng-click="exportToExcel('#tableToExport')">
+        <span class="glyphicon glyphicon-share"></span>
+        Export to Excel
+    </button>
+
+    <div id="tableToExport">
+        <table border="1">
+            <thead>
+            <tr class="table-header">
+                <th>Team</th>
+                <th>Process Type</th>
+                <th>Cedent</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>value 1</td>
+                <td>value 2</td>
+                <td>value 3</td>
+            </tr>
+            <tr>
+                <td>value 4</td>
+                <td>value 5</td>
+                <td>value 6</td>
+            </tr>
+            <tr>
+                <td>10.12.2015</td>
+                <td>AXA Affin</td>
+                <td>101024 - Quota Share QS</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br/>
+    <hr/>
+    <hr/>
+    <input type="file" id="fileInput1" />
+    <button class="btn btn-link" ng-click="import()">
+        <span class="glyphicon glyphicon-share"></span>
+        Export to Excel
+    </button>
     <script src="angular.js"></script>
     <script src="angular-base64-upload.js"></script>
     <script src="imageupload.js"></script>
     <script src="app.js"></script>
+    <script type="text/javascript" src="xlsx.js"></script>
 </body>
 </html>
