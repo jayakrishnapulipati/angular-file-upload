@@ -39,7 +39,10 @@
         <span class="glyphicon glyphicon-share"></span>
         Export to Excel
     </button>
-
+    <button class="btn btn-link" ng-click="exportToPDF('#tableToExport')">
+        <span class="glyphicon glyphicon-share"></span>
+        Export to PDF
+    </button>
     <div id="tableToExport">
         <table border="1">
             <tr>
@@ -79,6 +82,7 @@
     <script src="imageupload.js"></script>
     <script type="text/javascript" src="jszip.js"></script>
     <script type="text/javascript" src="xlsx.js"></script>
+    <script type="text/javascript" src="jspdf.min.js"></script>
     <script src="app.js"></script>
     
 </body>

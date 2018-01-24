@@ -128,5 +128,16 @@ app.controller('fileController', function ($scope, $http, $window, $timeout) {
         }
     }
 
+    $scope.exportToPDF = function (tableId) {
+        var doc = new jsPDF();
+        doc.setFont("courier");
+        doc.setLineWidth(0.2);
+        doc.fromHTML(angular.element(document.querySelector(tableId)).html(), 5, 5, {
+            'width': 170
+        });
+        //doc.text(angular.element(document.querySelector(tableId))[0].outerText, 10, 10);
+        doc.save('a4.pdf');
+    }
+
 
 });
